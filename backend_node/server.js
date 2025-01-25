@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
+const cors = require('cors');
 
 // MongoDB connection
 mongoose.connect('mongodb://localhost:27017/fitnessTracker')
@@ -12,7 +13,9 @@ mongoose.connect('mongodb://localhost:27017/fitnessTracker')
     });
 
 // Middleware
+app.use(cors());
 app.use(express.json());
+
 
 // Routes
 const userRoutes = require('./routes/userRoutes');
