@@ -24,7 +24,7 @@ const authRoutes = require('./routes/authRoutes');
 app.use('/api/auth', authRoutes);
 
 // Start the server
-const PORT = process.env.PORT || 5001; // Changed port to 5001
+const PORT = process.env.PORT || 5002; // Changed port to 5002
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
